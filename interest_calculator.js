@@ -13,12 +13,13 @@ function calcInterest(){
 	} else {
 		timeCompounds = parseInt(operatorType)
 	}
+
 	var numberTimes = loanTime/interestLength
 
 	var numberCompounds = (interestLength - (interestLength%timeCompounds))/timeCompounds;
 
 	var moneyEarned = initialMoney*(1+(interestRate/numberCompounds))**(numberCompounds*numberTimes);
 
-	document.querySelector("#result").innerHTML = Math.round(moneyEarned);
+	document.querySelector("#result").innerHTML = Math.round(moneyEarned*100)/100;
 
 }
