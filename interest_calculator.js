@@ -20,6 +20,6 @@ function calcInterest(){
 
 	var moneyEarned = initialMoney*(1+(interestRate/numberCompounds))**(numberCompounds*numberTimes);
 
-	document.querySelector("#result").innerHTML = Math.round(moneyEarned*100)/100;
+	document.querySelector("#result").innerHTML = "$" + Math.round(moneyEarned*100)/100;
 
 }
